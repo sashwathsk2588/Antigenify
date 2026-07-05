@@ -1,6 +1,5 @@
 # Backbone
 
-Vortex-faithful StripedHyena2 architecture for mRNA sequence generation.
 
 See the design and implementation history under `docs/superpowers/`:
 - `specs/2026-06-27-backbone-design.md` — Spec 1, initial codebase shell
@@ -32,8 +31,7 @@ See the design and implementation history under `docs/superpowers/`:
 - `configs/backbone-base-200m.yml`  — 200M params (default for `run_generate`)
 - `configs/backbone-large-1b.yml`   — 1B params
 
-All three use a 16-token mRNA vocab and a vortex-faithful StripedHyena2
-architecture: four block kinds (`attn`, `hcs`, `hcm`, `hcl`) assigned to
+All three use a 16-token mRNA vocab and Convolutional Multi-Hybrid Architecture: four block kinds (`attn`, `hcs`, `hcm`, `hcl`) assigned to
 layer indices via `attn_layer_idxs` / `hcs_layer_idxs` / `hcm_layer_idxs` /
 `hcl_layer_idxs`. The convolutional multi-hybrid lives inside `HyenaCascade`
 (3-projection front FIR → column-split → inner filter → gate → out
