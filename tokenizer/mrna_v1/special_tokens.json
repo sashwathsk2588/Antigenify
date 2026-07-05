@@ -1,0 +1,7 @@
+{
+  "pad_token": "<pad>",
+  "bos_token": "<bos>",
+  "eos_token": "<eos>",
+  "unk_token": "<unk>",
+  "region_tokens": ["<5UTR>", "</5UTR>", "<CDS>", "</CDS>", "<3UTR>", "</3UTR>", "<polyA>"]
+}
