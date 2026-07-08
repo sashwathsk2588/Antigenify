@@ -1,20 +1,5 @@
-"""Attention modules — vortex/model/attention.py B-fidelity port.
+"""Attention modules 
 
-Public surface:
-  get_alibi_slopes          (vortex/model/attention.py:32)
-  FlashSelfAttention        (vortex/model/attention.py:48)
-  FlashCrossAttention       (vortex/model/attention.py:133)
-  SelfAttention             (vortex/model/attention.py:230) — packed-qkv, pure-PyTorch
-  CrossAttention            (vortex/model/attention.py:286) — packed q+kv, pure-PyTorch
-  MHA                       (vortex/model/attention.py:381) — multi-head with rotary, GQA, cross-attn
-
-Skipped from vortex MHA (deferred / not B-fidelity-relevant):
-  - dwconv branch                              (vortex-specific 1d-conv pre-mix)
-  - fused_bias_fc / FusedDense / LinearResidual (TransformerEngine wrappers)
-  - mixer_subset                               (ViT-only)
-  - _apply_rotary_update_kvcache_attention     (Flash + Megatron-style fast decode path)
-  - rotary_emb_scale_base / interleaved        (xPos / interleaved rotary variants)
-  - checkpointing                              (torch.utils.checkpoint wiring)
 
 The MHA class accepts ``inference_params`` (vortex naming) — in this codebase
 it's our :class:`backbone.model.cache.Cache`. The Megatron-style fields
