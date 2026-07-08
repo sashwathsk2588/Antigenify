@@ -1,4 +1,4 @@
-"""Rotary embeddings — pure-PyTorch B-fidelity port of vortex/model/rotary.py.
+"""
 
 Exports:
   rotate_half(x)
