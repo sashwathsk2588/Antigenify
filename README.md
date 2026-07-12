@@ -29,7 +29,7 @@ Every layer index in `range(num_layers)` appears in exactly one list. The
 three `hc*` categories all instantiate `ParallelGatedConvBlock`; they differ
 only in how the cascade's *inner filter* is parametrized (see below).
 
-### The cascade — where "multi-hybrid" lives
+### HyenaCascade
 
 `HyenaCascade` (in `backbone/model/model.py`) is a single operator that runs
 input through three stages plus a gate:
