@@ -1,4 +1,4 @@
-# Backbone
+# Antigenify
 
 A convolutional multi-hybrid sequence model for mRNA generation. Pure PyTorch,
 runnable on CPU, sized from 50M to 1B parameters.
